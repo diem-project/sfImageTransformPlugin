@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/25859/plugins/sfImageTransformPlugin/trunk
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/12177/plugins/sfImageTransformPlugin/trunk/LICENSE
+END
+package.xml.tmpl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/25859/plugins/sfImageTransformPlugin/trunk/package.xml.tmpl
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/24731/plugins/sfImageTransformPlugin/trunk/README
+END

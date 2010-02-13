@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/22185/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick
+END
+sfImageMirrorImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageMirrorImageMagick.class.php
+END
+sfImageResizeSimpleImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/!svn/ver/19156/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageResizeSimpleImageMagick.class.php
+END
+sfImageTrimImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageTrimImageMagick.class.php
+END
+sfImageGreyscaleImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/22185/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageGreyscaleImageMagick.class.php
+END
+sfImageOverlayImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageOverlayImageMagick.class.php
+END
+sfImageTextImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/19155/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageTextImageMagick.class.php
+END
+sfImageFillImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/20322/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageFillImageMagick.class.php
+END
+sfImageColorizeImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageColorizeImageMagick.class.php
+END
+sfImageScaleImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageScaleImageMagick.class.php
+END
+sfImageLineImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageLineImageMagick.class.php
+END
+sfImageFlipImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageFlipImageMagick.class.php
+END
+sfImagePrettyThumbnailImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImagePrettyThumbnailImageMagick.class.php
+END
+sfImageRotateImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageRotateImageMagick.class.php
+END
+sfImageCropImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/20323/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageCropImageMagick.class.php
+END
+sfImageRectangleImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageRectangleImageMagick.class.php
+END
+sfImageOpacityImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageOpacityImageMagick.class.php
+END
+sfImageBrightnessImageMagick.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/ImageMagick/sfImageBrightnessImageMagick.class.php
+END

@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/25856/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD
+END
+sfImageOverlayGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/19248/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageOverlayGD.class.php
+END
+sfImageFillGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageFillGD.class.php
+END
+sfImageScaleGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageScaleGD.class.php
+END
+sfImageLineGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageLineGD.class.php
+END
+sfImagePixelizeGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImagePixelizeGD.class.php
+END
+sfImageReflectionGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageReflectionGD.class.php
+END
+sfImageContrastGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageContrastGD.class.php
+END
+sfImageEllipseGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageEllipseGD.class.php
+END
+sfImageCropGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/23732/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageCropGD.class.php
+END
+sfImageScatterGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageScatterGD.class.php
+END
+sfImageArcGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageArcGD.class.php
+END
+sfImageSelectiveBlurGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageSelectiveBlurGD.class.php
+END
+sfImageBrightnessGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageBrightnessGD.class.php
+END
+sfImageTransparencyGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageTransparencyGD.class.php
+END
+sfImageGreyscaleGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageGreyscaleGD.class.php
+END
+sfImageGammaGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageGammaGD.class.php
+END
+sfImageTextGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/23801/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageTextGD.class.php
+END
+sfImageColorizeGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/23733/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageColorizeGD.class.php
+END
+sfImageEmbossGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageEmbossGD.class.php
+END
+sfImageFlipGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageFlipGD.class.php
+END
+sfImageEdgeDetectGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageEdgeDetectGD.class.php
+END
+sfImageRotateGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageRotateGD.class.php
+END
+sfImageGaussianBlurGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageGaussianBlurGD.class.php
+END
+sfImageNegateGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageNegateGD.class.php
+END
+sfImageRectangleGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageRectangleGD.class.php
+END
+sfImagePixelBlurGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImagePixelBlurGD.class.php
+END
+sfImageOpacityGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageOpacityGD.class.php
+END
+sfImageSmoothGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageSmoothGD.class.php
+END
+sfImageSketchyGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageSketchyGD.class.php
+END
+sfImageMirrorGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageMirrorGD.class.php
+END
+sfImageResizeSimpleGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/25856/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageResizeSimpleGD.class.php
+END
+sfImageNoiseGD.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/GD/sfImageNoiseGD.class.php
+END

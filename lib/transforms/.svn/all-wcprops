@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/25856/plugins/sfImageTransformPlugin/trunk/lib/transforms
+END
+sfImageTransformAbstract.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/sfImageTransformAbstract.class.php
+END

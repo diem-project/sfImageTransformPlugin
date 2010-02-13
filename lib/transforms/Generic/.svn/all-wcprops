@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/22655/plugins/sfImageTransformPlugin/trunk/lib/transforms/Generic
+END
+sfImageThumbnailGeneric.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/22655/plugins/sfImageTransformPlugin/trunk/lib/transforms/Generic/sfImageThumbnailGeneric.php
+END
+sfImageBorderGeneric.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/19153/plugins/sfImageTransformPlugin/trunk/lib/transforms/Generic/sfImageBorderGeneric.php
+END
+sfResizeGeneric.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/22172/plugins/sfImageTransformPlugin/trunk/lib/transforms/Generic/sfResizeGeneric.php
+END
