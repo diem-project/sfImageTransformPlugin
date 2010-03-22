@@ -1,5 +1,5 @@
 # default values
-all:
+default:
   sfImageTransformPlugin:
     default_adapter: GD # GD or ImageMagick
     default_image:

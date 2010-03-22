@@ -118,7 +118,7 @@ Generic
 
 GD
 
-  * arc
+  * alphaMask, arc
   * brightness
   * colorize, contrast, crop
   * edgeDetect, ellipse, emboss
@@ -129,21 +129,24 @@ GD
   * negate, noise
   * opacity, overlay
   * pixelBlur, pixelize
-  * rectangle, resize, rotate
+  * rectangle, resize, rotate, roundedCorners
   * scale, scatter, selectiveBlur, sketchy, smooth
   * text, transparency
 
 
 ImageMagick
 
-  * crop
+  * brightness
+  * colorize, crop
   * fill, flip
+  * greyscale
+  * line
   * mirror
+  * opacity, overlay
   * prettyThumbnail
   * rectangle, resize, rotate
   * scale
   * text, trim
-  * opacity
             
 ## Writing your own transforms ##
 

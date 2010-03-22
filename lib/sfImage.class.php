@@ -500,7 +500,16 @@ class sfImage
 
         if(function_exists('finfo_file'))
         {
-          $finfo = finfo_open(FILEINFO_MIME);
+          // Support for PHP 5.3+
+          if(defined(FILEINFO_MIME_TYPE))
+          {
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+          }
+
+          else
+          {
+            $finfo = finfo_open(FILEINFO_MIME);
+          }
 
           return finfo_file($finfo, $filename);
         }
