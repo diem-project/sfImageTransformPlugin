@@ -20,39 +20,82 @@
  */
 class sfImageAlphaMaskGD extends sfImageTransformAbstract
 {
+  /**
+   * sfImage mask object
+   * 
+   * @var sfImage
+   */
+  protected $mask = null;
+
+  /**
+   * Color
+   *
+   * @var mixed
+   */
+  protected $color = false;
+
   public function __construct($mask, $color = false) 
   {
-    $this->mask  = $mask;
-    $this->color = $color;
+    $this->setMask($mask);
+    $this->setColor($color);
+  }
+
+  public function setMask(sfImage $mask)
+  {
+    $this->mask = $mask;
+
+    return true;
+  }
+
+  public function getMask()
+  {
+    return $this->mask;
+  }
+
+  public function setColor($color)
+  {
+    if (preg_match('/#[\d\w]{6}/',$color))
+    {
+      $this->color = strtoupper($color);
+
+      return true;
+    }
+
+    return false;
+  }
+
+  public function getColor()
+  {
+    return $this->color;
   }
   
   protected function transform(sfImage $image) 
   {
-    $this->image    = $image;
-    $this->mimeType = $image->getMIMEType();
-    $resource       = $image->getAdapter()->getHolder();
-    
-    switch ($this->mimeType) 
+
+    switch ($image->getMIMEType())
     {
       case 'image/png':
-        $this->transformAlpha($resource);
+        $this->transformAlpha($image);
         break;
       case 'image/gif':
       case 'image/jpg':
       default:
-        $this->transformDefault($resource);
+        $this->transformDefault($image);
     }
     
     return $image;
   }
-  
-  private function transformAlpha($resource) 
+
+  private function transformAlpha(sfImage $image)
   {
-    $w = imagesx($resource);
-    $h = imagesy($resource);
+    $w = $image->getWidth();
+    $h = $image->getHeight();
+
+    $resource = $image->getAdapter()->getHolder();
     
-    $mask   = $this->mask->getAdapter()->getHolder();
     $canvas = imagecreatetruecolor($w, $h);
+
+    $mask = $this->getMask()->getAdapter()->getHolder();
     
     $color_background = imagecolorallocate($canvas, 0, 0, 0);
     imagefilledrectangle($canvas, 0, 0, $w, $h, $color_background);
@@ -63,60 +106,48 @@ class sfImageAlphaMaskGD extends sfImageTransformAbstract
     {
       for ($y = 0;$y < $h;$y++) 
       {
-        $RealPixel = @imagecolorsforindex($resource, @imagecolorat($resource, $x, $y));
-        $MaskPixel = @imagecolorsforindex($mask, @imagecolorat($mask, $x, $y));
-        $MaskAlpha = 127 - (floor($MaskPixel['red'] / 2) * (1 - ($RealPixel['alpha'] / 127)));
+        $real_pixel = imagecolorsforindex($resource, imagecolorat($resource, $x, $y));
+        $mask_pixel = imagecolorsforindex($mask, imagecolorat($mask, $x, $y));
+        $mask_alpha = 127 - (floor($mask_pixel['red'] / 2) * (1 - ($real_pixel['alpha'] / 127)));
         
-        if (false === $this->color) 
+        if (false === $this->getColor())
         {
-          $newcolor = imagecolorallocatealpha($canvas, $RealPixel['red'], $RealPixel['green'], $RealPixel['blue'], intval($MaskAlpha));
+          $newcolor = imagecolorallocatealpha($canvas, $real_pixel['red'], $real_pixel['green'], $real_pixel['blue'], intval($mask_alpha));
         }
         else
         {
-          $newcolorPixel    = sscanf($this->color, '#%2x%2x%2x');
-          $newcolorPixel[0] = ($newcolorPixel[0] * $MaskAlpha + $RealPixel['red'] * (127 - $MaskAlpha)) / 127;
-          $newcolorPixel[1] = ($newcolorPixel[1] * $MaskAlpha + $RealPixel['green'] * (127 - $MaskAlpha)) / 127;
-          $newcolorPixel[2] = ($newcolorPixel[2] * $MaskAlpha + $RealPixel['blue'] * (127 - $MaskAlpha)) / 127;
+          $newcolorPixel    = sscanf($this->getColor(), '#%2x%2x%2x');
+          $newcolorPixel[0] = ($newcolorPixel[0] * $mask_alpha + $real_pixel['red'] * (127 - $mask_alpha)) / 127;
+          $newcolorPixel[1] = ($newcolorPixel[1] * $mask_alpha + $real_pixel['green'] * (127 - $mask_alpha)) / 127;
+          $newcolorPixel[2] = ($newcolorPixel[2] * $mask_alpha + $real_pixel['blue'] * (127 - $mask_alpha)) / 127;
           $newcolor         = imagecolorallocate($canvas, $newcolorPixel[0], $newcolorPixel[1], $newcolorPixel[2]);
         }
+        
         imagesetpixel($canvas, $x, $y, $newcolor);
       }
     }
+
     imagealphablending($resource, false);
     imagesavealpha($resource, true);
     imagecopy($resource, $canvas, 0, 0, 0, 0, $w, $h);
     
-    imagedestroy($mask);
     imagedestroy($canvas);
   }
-
-  /**
-   * Callback function to extend/alter parameters as given in your thumbnailing.yml.
-   *
-   * This callback adds the resources path to a mask image
-   *
-   * @param  sfImage $sourceImage The original image
-   * @param  array   $parameters  Configured parameters for this transformation
-   * @return array   $parameters  Extended/altered parameters
-   */
-  public static function prepareParameters($sourceImage, $parameters)
+  
+  protected function transformDefault(sfImage $image)
   {
-    if (!array_key_exists('mask', $parameters))
-    {
-      return $parameters;
-    }
+    $w = $image->getWidth();
+    $h = $image->getHeight();
 
-    $user_resources_dir   = sfConfig::get('sf_data_dir') . '/resources';
-    $plugin_paths = ProjectConfiguration::getActive()->getAllPluginPaths();
-    $plugin_resources_dir = $plugin_paths['sfImageTransformExtraPlugin'].'/data/example-resources';
-    if (file_exists($user_resources_dir . '/' . $parameters['mask']))
-    {
-      $parameters['mask'] = new sfImage($user_resources_dir . '/' . $parameters['mask']);
-    }
-    else if (file_exists($plugin_resources_dir . '/' . $parameters['mask']))
-    {
-      $parameters['mask'] = new sfImage($plugin_resources_dir . '/' . $parameters['mask']);
-    }
-    return $parameters;
+    $resource = $image->getAdapter()->getHolder();
+
+    $mask = $this->getMask()->getAdapter()->getHolder();
+    
+    imagealphablending($resource, true);
+    $resource_transparent = imagecolorallocate($resource, 0, 0, 0);
+    imagecolortransparent($resource, $resource_transparent);
+    
+    // Copy $mask over the top of $resource maintaining the Alpha transparency
+    imagecopymerge($resource, $mask, 0, 0, 0, 0, $w, $h, 100);
   }
 }
