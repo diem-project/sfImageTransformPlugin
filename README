@@ -24,15 +24,22 @@ Installation
 
 To install the plugin for a symfony project, the usual process is to use the symfony command line:
 
-symfony 1.1 and 1.2
-
     symfony plugin:install sfImageTransformPlugin
 
-symfony 1.0
+for symfony 1.0
 
     symfony plugin-install http://plugins.symfony-project.com/sfImageTransformPlugin
 
 Alternatively, if you don't have PEAR installed, you can download the latest package attached to this plugin's wiki page and extract it under your project's plugins/ directory.
+
+Activate the plugin in your ProjectConfiguration.class.php.
+
+    class ProjectConfiguration extends sfProjectConfiguration
+    {
+      public function setup()
+      {
+        $this->enablePlugins(..., 'sfImageTransformPlugin', ...);
+
 
 Clear the cache to enable the autoloading to find the new classes:
 
@@ -99,7 +106,7 @@ Create a 150x150 pixel thumbnail
 
     $img = $scale->execute($img);
 
-    $img->saveAs('image2.gif', 'image/gif');
+    $img->saveAs('image2.gif');
 
 
 Note: If you install one of the supported MIME detection libraries you do not have to pass in the image's MIME type. See the section "Enabling MIME detection" for details.
@@ -114,6 +121,9 @@ Once phpDocumentor is installed you can generate the docs from inside the plugin
 
 Generic
 
+  * border
+  * callback
+  * resize
   * thumbnail
 
 GD
@@ -129,7 +139,7 @@ GD
   * negate, noise
   * opacity, overlay
   * pixelBlur, pixelize
-  * rectangle, resize, rotate, roundedCorners
+  * rectangle, rotate, roundedCorners
   * scale, scatter, selectiveBlur, sketchy, smooth
   * text, transparency
 
@@ -144,7 +154,7 @@ ImageMagick
   * mirror
   * opacity, overlay
   * prettyThumbnail
-  * rectangle, resize, rotate
+  * rectangle, rotate
   * scale
   * text, trim
             
