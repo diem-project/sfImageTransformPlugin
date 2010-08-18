@@ -38,7 +38,7 @@ class sfImageResizeGeneric extends sfImageTransformAbstract
   /**
    * do we want to keep the aspect ratio of the source image ?
    */
-  protected $proportional = false;
+  protected $proportional = true;
 
   /**
    * constructor
@@ -50,7 +50,7 @@ class sfImageResizeGeneric extends sfImageTransformAbstract
    *
    * @return void
    */
-  public function __construct($width, $height, $inflate = true, $proportional = false)
+  public function __construct($width, $height, $inflate = true, $proportional = true)
   {
     $this->setWidth($width);
     $this->setHeight($height);
